@@ -11,7 +11,7 @@ var DEMOS = [
           "contents": "\n\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">\n    Checkbox: Simple Usage\n  </h1>\n</ion-header-bar>\n<ion-content ng-controller=\"CheckboxSimpleCtrl\" class=\"padding\">\n  <h4>Your pizza has {{toppings()}}!</h4>\n  <ion-checkbox ng-model=\"pizza.pepperoni\">\n    Pepperoni?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.sausage\">\n    Sausage?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.jalapenos\">\n    Jalapeno?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.anchovies\">\n    Anchovies?\n  </ion-checkbox>\n</ion-content>",
           "extension": "html",
           "template": "asset.contents.template",
-          "outputPath": "ionCheckbox/simple/index.html",
+          "outputPath": "/ionic/ionCheckbox/simple/index.html",
           "renderedContent": "\n\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">\n    Checkbox: Simple Usage\n  </h1>\n</ion-header-bar>\n<ion-content ng-controller=\"CheckboxSimpleCtrl\" class=\"padding\">\n  <h4>Your pizza has {{toppings()}}!</h4>\n  <ion-checkbox ng-model=\"pizza.pepperoni\">\n    Pepperoni?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.sausage\">\n    Sausage?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.jalapenos\">\n    Jalapeno?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.anchovies\">\n    Anchovies?\n  </ion-checkbox>\n</ion-content>\n"
         }
       ],
@@ -25,7 +25,7 @@ var DEMOS = [
           "contents": "\n\nvar app = angular.module('simple', ['ionic']);\napp.controller('CheckboxSimpleCtrl', function($scope) {\n  $scope.pizza = {\n    pepperoni: true,\n    sausage: false,\n    anchovies: true,\n    jalapenos: false\n  };\n\n  $scope.toppings = function() {\n    var toppings = Object.keys($scope.pizza).filter(function(flavor) {\n      return $scope.pizza[flavor];\n    });\n    if (toppings.length > 1) {\n      toppings[toppings.length - 1] = 'and ' + toppings[toppings.length - 1];\n    }\n    if (toppings.length > 2) {\n      return toppings.join(', ');\n    } else if (toppings.length) {\n      return toppings.join(' ');\n    } else {\n      return 'nothing';\n    }\n  };\n});",
           "extension": "js",
           "template": "asset.contents.template",
-          "outputPath": "ionCheckbox/simple/index.js",
+          "outputPath": "/ionic/ionCheckbox/simple/index.js",
           "renderedContent": "\n\nvar app = angular.module('simple', ['ionic']);\napp.controller('CheckboxSimpleCtrl', function($scope) {\n  $scope.pizza = {\n    pepperoni: true,\n    sausage: false,\n    anchovies: true,\n    jalapenos: false\n  };\n\n  $scope.toppings = function() {\n    var toppings = Object.keys($scope.pizza).filter(function(flavor) {\n      return $scope.pizza[flavor];\n    });\n    if (toppings.length > 1) {\n      toppings[toppings.length - 1] = 'and ' + toppings[toppings.length - 1];\n    }\n    if (toppings.length > 2) {\n      return toppings.join(', ');\n    } else if (toppings.length) {\n      return toppings.join(' ');\n    } else {\n      return 'nothing';\n    }\n  };\n});\n"
         }
       ],
@@ -39,7 +39,7 @@ var DEMOS = [
           "contents": "\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});",
           "extension": "scenario.js",
           "template": "scenario.template.js",
-          "outputPath": "ionCheckbox/simple/test.scenario.js",
+          "outputPath": "/ionic/ionCheckbox/simple/test.scenario.js",
           "url": "http://localhost:8876/ionCheckbox/simple/",
           "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
         }
@@ -48,7 +48,7 @@ var DEMOS = [
     "id": "ionCheckbox-simple",
     "name": "simple",
     "component": "ionCheckbox",
-    "href": "/ionCheckbox/simple/"
+    "href": "/ionic/ionCheckbox/simple/"
   },
   {
     "files": {
@@ -113,7 +113,7 @@ var DEMOS = [
     "id": "collectionRepeat-contacts",
     "name": "contacts",
     "component": "collectionRepeat",
-    "href": "/collectionRepeat/contacts/"
+    "href": "/ionic/collectionRepeat/contacts/"
   },
   {
     "files": {
@@ -164,7 +164,7 @@ var DEMOS = [
     "id": "ionFooterBar-simple",
     "name": "simple",
     "component": "ionFooterBar",
-    "href": "/ionFooterBar/simple/"
+    "href": "/ionic/ionFooterBar/simple/"
   },
   {
     "files": {
@@ -215,7 +215,7 @@ var DEMOS = [
     "id": "ionHeaderBar-simple",
     "name": "simple",
     "component": "ionHeaderBar",
-    "href": "/ionHeaderBar/simple/"
+    "href": "/ionic/ionHeaderBar/simple/"
   },
   {
     "files": {
@@ -266,7 +266,7 @@ var DEMOS = [
     "id": "ionInfiniteScroll-forever",
     "name": "forever",
     "component": "ionInfiniteScroll",
-    "href": "/ionInfiniteScroll/forever/"
+    "href": "/ionic/ionInfiniteScroll/forever/"
   },
   {
     "files": {
@@ -331,7 +331,7 @@ var DEMOS = [
     "id": "ionList-animated",
     "name": "animated",
     "component": "ionList",
-    "href": "/ionList/animated/"
+    "href": "/ionic/ionList/animated/"
   },
   {
     "files": {
@@ -382,7 +382,7 @@ var DEMOS = [
     "id": "ionList-reorderDelete",
     "name": "reorderDelete",
     "component": "ionList",
-    "href": "/ionList/reorderDelete/"
+    "href": "/ionic/ionList/reorderDelete/"
   },
   {
     "files": {
@@ -433,7 +433,7 @@ var DEMOS = [
     "id": "ionRadio-chooseOne",
     "name": "chooseOne",
     "component": "ionRadio",
-    "href": "/ionRadio/chooseOne/"
+    "href": "/ionic/ionRadio/chooseOne/"
   },
   {
     "files": {
@@ -484,7 +484,7 @@ var DEMOS = [
     "id": "ionRefresher-refreshList",
     "name": "refreshList",
     "component": "ionRefresher",
-    "href": "/ionRefresher/refreshList/"
+    "href": "/ionic/ionRefresher/refreshList/"
   },
   {
     "files": {
@@ -535,7 +535,7 @@ var DEMOS = [
     "id": "ionSideMenus-navWithMenu",
     "name": "navWithMenu",
     "component": "ionSideMenus",
-    "href": "/ionSideMenus/navWithMenu/"
+    "href": "/ionic/ionSideMenus/navWithMenu/"
   },
   {
     "files": {
@@ -600,7 +600,7 @@ var DEMOS = [
     "id": "ionSideMenus-simple",
     "name": "simple",
     "component": "ionSideMenus",
-    "href": "/ionSideMenus/simple/"
+    "href": "/ionic/ionSideMenus/simple/"
   },
   {
     "files": {
@@ -665,7 +665,7 @@ var DEMOS = [
     "id": "ionSlideBox-appIntro",
     "name": "appIntro",
     "component": "ionSlideBox",
-    "href": "/ionSlideBox/appIntro/"
+    "href": "/ionic/ionSlideBox/appIntro/"
   },
   {
     "files": {
@@ -716,7 +716,7 @@ var DEMOS = [
     "id": "ionTabs-tabsAndNav",
     "name": "tabsAndNav",
     "component": "ionTabs",
-    "href": "/ionTabs/tabsAndNav/"
+    "href": "/ionic/ionTabs/tabsAndNav/"
   },
   {
     "files": {
@@ -767,7 +767,7 @@ var DEMOS = [
     "id": "itemFloatingLabel-floatingLabel",
     "name": "floatingLabel",
     "component": "itemFloatingLabel",
-    "href": "/itemFloatingLabel/floatingLabel/"
+    "href": "/ionic/itemFloatingLabel/floatingLabel/"
   },
   {
     "files": {
@@ -818,7 +818,7 @@ var DEMOS = [
     "id": "ionToggle-simple",
     "name": "simple",
     "component": "ionToggle",
-    "href": "/ionToggle/simple/"
+    "href": "/ionic/ionToggle/simple/"
   },
   {
     "files": {
@@ -869,7 +869,7 @@ var DEMOS = [
     "id": "$ionicActionSheet-takeAction",
     "name": "takeAction",
     "component": "$ionicActionSheet",
-    "href": "/$ionicActionSheet/takeAction/"
+    "href": "/ionic/$ionicActionSheet/takeAction/"
   },
   {
     "files": {
@@ -920,7 +920,7 @@ var DEMOS = [
     "id": "$ionicLoading-complete",
     "name": "complete",
     "component": "$ionicLoading",
-    "href": "/$ionicLoading/complete/"
+    "href": "/ionic/$ionicLoading/complete/"
   },
   {
     "files": {
@@ -971,7 +971,7 @@ var DEMOS = [
     "id": "$ionicPopover-popover",
     "name": "popover",
     "component": "$ionicPopover",
-    "href": "/$ionicPopover/popover/"
+    "href": "/ionic/$ionicPopover/popover/"
   },
   {
     "files": {
@@ -1022,6 +1022,6 @@ var DEMOS = [
     "id": "$ionicPopup-popping",
     "name": "popping",
     "component": "$ionicPopup",
-    "href": "/$ionicPopup/popping/"
+    "href": "/ionic/$ionicPopup/popping/"
   }
 ];
